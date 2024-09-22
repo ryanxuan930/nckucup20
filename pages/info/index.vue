@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>目前無最新消息</div>
+    <CommonTitle title="賽事簡介" />
+    <div>敬請期待</div>
   </div>
 </template>
 

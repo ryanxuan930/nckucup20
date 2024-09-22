@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CommonTitle title="場地資訊" />
+    <CommonTitle title="選手編配" />
     <div>敬請期待</div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>最新消息</div>
+    <CommonTitle title="最新消息" />
   </div>
 </template>
 
