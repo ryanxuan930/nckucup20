@@ -62,8 +62,8 @@
   const { width } = useWindowSize();
 
   const frameWidth = computed(() => {
-    if (width.value < 550) {
-      return width.value - 50;
+    if (width.value < 600) {
+      return width.value - 100;
     }
     return 500;
   });
