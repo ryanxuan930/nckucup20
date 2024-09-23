@@ -23,7 +23,7 @@
         >即刻報名</button>
       </div>
     </div>
-    <div>
+    <div v-if="isLoaded">
       <CommonTitle title="社群媒體" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-1">
         <iframe
@@ -59,6 +59,8 @@
 <script lang="ts" setup>
   import { useWindowSize } from '@vueuse/core';
 
+  const isLoaded = ref(false);
+
   const { width } = useWindowSize();
 
   const frameWidth = computed(() => {
@@ -70,6 +72,9 @@
   function openLink(url: string) {
     window.open(url, '_blank');
   }
+  onMounted(() => {
+    isLoaded.value = true;
+  });
 </script>
 
 <style></style>
