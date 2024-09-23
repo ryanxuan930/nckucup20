@@ -29,16 +29,16 @@
         @click="router.push(`/news/${item.bulletin_id}`)"
       >
         <tr>
-          <td class="w-1/6 text-left lg:w-1/12">
+          <td class="text-left lg:w-1/12">
             <Tag v-if="item.pinned">置頂</Tag>
           </td>
-          <td class="w-3/6 lg:w-2/12">
+          <td class="lg:w-2/12">
             <div :class="['category', categoryList[item.category].css]">{{ categoryList[item.category].label }}</div>
           </td>
           <td class="hidden lg:block w-7/12 font-bold text-left overflow-hidden">
             <div class="p-1">{{ item.title_ch }}</div>
           </td>
-          <td class="w-2/6 lg:w-2/12">[{{ item.post_date }}]</td>
+          <td class="lg:w-2/12">[{{ item.post_date }}]</td>
         </tr>
         <tr class="lg:hidden">
           <td
