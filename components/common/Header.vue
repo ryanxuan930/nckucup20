@@ -1,5 +1,6 @@
 <template>
   <Menubar
+    v-if="isLoaded"
     :model="items"
     breakpoint="1024px"
     :pt="{
@@ -44,8 +45,13 @@
 </template>
 
 <script lang="ts" setup>
+  const isLoaded = ref(false);
+  onMounted(() => {
+    isLoaded.value = true;
+  });
   const router = useRouter();
   const items = ref([
+    { link: '首頁', action: { to: '/' } },
     { link: '最新消息', action: { to: '/news' } },
     {
       link: '競賽資訊', action: {}, items: [

@@ -8,15 +8,15 @@
         src="/images/background.jpg"
         alt=""
       >
-      <div class="bg-red-950 p-2 flex">
-        <div class="m-auto flex flex-col md:flex-row gap-1 sm:gap-5 items-center text-white font-semibold">
-          <div class="text-lg">第二十屆成功盃</div>
+      <div class="bg-red-800 p-2 flex">
+        <div class="m-auto flex flex-col md:flex-row gap-1 sm:gap-3 items-center text-white font-semibold">
+          <div class="text-lg">20th NCKU Cup</div>
           <div
             style="font-family: digital;"
-            class="py-1 px-3 bg-black text-xl"
+            class="py-1 px-3 bg-black text-2xl"
           >{{ countdownText }}</div>
           <div class="flex items-center gap-2 font-normal text-xs md:text-base">
-            <span>by</span>
+            <span>Countdown by</span>
             <span style="font-family: Audiowide">TechNSport</span>
             <span>the Official Timekeeper</span>
           </div>

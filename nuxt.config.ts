@@ -25,7 +25,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   css: ['~/assets/css/main.scss'],
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxt/eslint', '@primevue/nuxt-module'],
+  app: {
+    head: {
+      title: '第二十屆成功盃全國田徑錦標賽',
+    }
+  },
+  modules: ['@nuxtjs/i18n', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxt/eslint', '@primevue/nuxt-module', '@vueuse/nuxt'],
   postcss: {
     plugins: {
       tailwindcss: {},
