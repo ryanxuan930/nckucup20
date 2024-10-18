@@ -15,7 +15,6 @@ export async function useRequest(url: string, token: string|null, method: 'GET'|
   }
   if (formData) {
     options.body = formData;
-    console.log('formData', formData);
   }
   const { data, error }: { data: any, error: any } = await useFetch(url, options);
   return { data: data.value, error: error.value };

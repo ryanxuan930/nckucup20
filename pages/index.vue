@@ -12,7 +12,7 @@
         </div>
         <div class="text-sm lg:text-xl font-semibold flex flex-col md:flex-row items-baseline">
           <span>繳費截止：</span>
-          <span class="text-xl lg:text-4xl">2024-10-26</span>
+          <span class="text-xl lg:text-4xl">2024-10-28</span>
         </div>
       </div>
       <Divider layout="vertical" />
@@ -22,6 +22,10 @@
           @click="openLink('https://athletix.technsport.co/registration/login/user/nckucup20')"
         >即刻報名</button>
       </div>
+    </div>
+    <div>
+      <CommonTitle title="報名狀態" />
+      <CommonRegistration />
     </div>
     <div v-if="isLoaded">
       <CommonTitle title="社群媒體" />
@@ -52,6 +56,18 @@
     </div>
     <div>
       <CommonTitle title="贊助商" />
+      <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 lg:gap-1">
+        <Card class="flex flex-col items-center">
+          <template #content>
+            <img
+              src="/images/technsport.png"
+              alt="致躍科技有限公司"
+              class="w-full h-20 object-contain"
+            >
+            <div class="text-lg font-semibold">致躍科技有限公司</div>
+          </template>
+        </Card>
+      </div>
     </div>
   </div>
 </template>
@@ -72,7 +88,7 @@
   function openLink(url: string) {
     window.open(url, '_blank');
   }
-  onMounted(() => {
+  onMounted(async () => {
     isLoaded.value = true;
   });
 </script>

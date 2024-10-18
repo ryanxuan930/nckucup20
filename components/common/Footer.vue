@@ -14,7 +14,7 @@
       </div>
       <div>協辦單位：高雄大專院校田徑聯盟</div>
     </div>
-    <div class="md:text-center">地址：701台南市東區大學路1號　電話：06-2757575　Email：nckutnf20@gs.ncku.edu.tw</div>
+    <div class="md:text-center">地址：701台南市東區大學路1號　電話：06-2757575　Email：nckutnf20@gmail.com</div>
     <div class="text-sm md:text-center">官方計時與資訊系統建置：致躍科技有限公司</div>
   </div>
 </template>
