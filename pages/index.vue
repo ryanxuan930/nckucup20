@@ -23,10 +23,6 @@
         >即刻報名</button>
       </div>
     </div>
-    <div>
-      <CommonTitle title="報名狀態" />
-      <CommonRegistration />
-    </div>
     <div v-if="isLoaded">
       <CommonTitle title="社群媒體" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-1">

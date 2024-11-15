@@ -49,13 +49,19 @@
     isLoading.value = true;
     // bulletins
     {
-      const { data, error }: { data: any, error: any; } = await useRequest(`4/bulletin/${route.params.newsId}`, null, 'GET');
-      if (error) {
-        toast.add({ severity: 'error', summary: '取得公告資料失敗', life: 5000 });
-        return;
-      }
-      if (data) {
+      try {
+        const response = await fetch(`https://athletics.nsysu.dev/sepserver/api/4/bulletin/${route.params.newsId}`, {
+          method: 'GET',
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
         bulletin.value = data;
+      } catch (error: any) {
+        toast.add({ severity: 'error', summary: error, life: 5000 });
+      } finally {
+        isLoading.value = false;
       }
     }
     isLoading.value = false;

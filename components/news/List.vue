@@ -109,13 +109,18 @@
     }
     // bulletins
     {
-      const { data, error }: { data: any, error: any; } = await useRequest(url, null, 'GET');
-      if (error) {
-        toast.add({ severity: 'error', summary: '取得公告資料失敗', life: 5000 });
-        return;
-      }
-      if (data) {
+      try {
+        const response = await fetch(`https://athletics.nsysu.dev/sepserver/api/${url}`, {
+          method: 'GET',
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
         bulletins.value = data;
+      } catch (error) {
+        toast.add({ severity: 'error', summary: '取得公告資料失敗', life: 5000 });
+        console.error('Fetch error:', error);
       }
     }
     isLoading.value = false;

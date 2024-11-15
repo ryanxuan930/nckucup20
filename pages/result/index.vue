@@ -1,7 +1,8 @@
 <template>
   <div>
     <CommonTitle title="競賽成績" />
-    <div>敬請期待</div>
+    <div>
+    </div>
   </div>
 </template>
 
