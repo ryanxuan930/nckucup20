@@ -52,6 +52,7 @@
       }
       if (data) {
         schedules.value = data;
+        console.log(data);
       }
     }
   }
