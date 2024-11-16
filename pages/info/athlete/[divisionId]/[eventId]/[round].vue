@@ -68,7 +68,7 @@
       if (data) {
         athleteData.value = data.sort((a: any, b: any) => {
           return a[`heat_${route.params.round}`] - b[`heat_${route.params.round}`] || a[`lane_${route.params.round}`] - b[`lane_${route.params.round}`];
-        });
+        }).filter((item: any) => item[`heat_${route.params.round}`] > 0 && item[`lane_${route.params.round}`] > 0);
       }
     }
     isLoaded.value = true;
